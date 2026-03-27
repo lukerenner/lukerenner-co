@@ -7,9 +7,8 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: "Geist", "Geist Fallback", ui-sans-serif, system-ui, sans-serif;
-  --font-mono: "Geist Mono", "Geist Mono Fallback", ui-monospace, monospace;
-  --font-heading: var(--font-sans);
+  --font-sans: var(--font-open-sans), "Open Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-nav: var(--font-lato), "Lato", ui-sans-serif, system-ui, sans-serif;
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -18,15 +17,9 @@
   --color-sidebar-primary: var(--sidebar-primary);
   --color-sidebar-foreground: var(--sidebar-foreground);
   --color-sidebar: var(--sidebar);
-  --color-chart-5: var(--chart-5);
-  --color-chart-4: var(--chart-4);
-  --color-chart-3: var(--chart-3);
-  --color-chart-2: var(--chart-2);
-  --color-chart-1: var(--chart-1);
   --color-ring: var(--ring);
   --color-input: var(--input);
   --color-border: var(--border);
-  --color-destructive: var(--destructive);
   --color-accent-foreground: var(--accent-foreground);
   --color-accent: var(--accent);
   --color-muted-foreground: var(--muted-foreground);
@@ -35,26 +28,30 @@
   --color-secondary: var(--secondary);
   --color-primary-foreground: var(--primary-foreground);
   --color-primary: var(--primary);
-  --color-popover-foreground: var(--popover-foreground);
-  --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
   --radius-sm: calc(var(--radius) * 0.6);
   --radius-md: calc(var(--radius) * 0.8);
   --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) * 1.4);
-  --radius-2xl: calc(var(--radius) * 1.8);
-  --radius-3xl: calc(var(--radius) * 2.2);
-  --radius-4xl: calc(var(--radius) * 2.6);
 }
 
 :root {
+  /* lukerenner.co design tokens */
+  --lr-dark: #242424;           /* rgb(36,36,36) — dark section bg */
+  --lr-accent: #c45543;         /* rgb(196,85,67) — burnt orange */
+  --lr-text-dark: #353535;      /* rgb(53,53,53) — body text on white */
+  --lr-text-muted: #646464;     /* rgb(100,100,100) — muted text */
+  --lr-icon-gray: #999999;      /* rgb(153,153,153) — SVG icons */
+  --lr-gray-bg: #f2f2f2;        /* light gray contact section bg */
+  --lr-divider: #b4b4b4;        /* hr color */
+
+  /* shadcn tokens mapped to site */
   --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
+  --foreground: oklch(0.22 0 0);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
+  --card-foreground: oklch(0.22 0 0);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
+  --popover-foreground: oklch(0.22 0 0);
   --primary: oklch(0.205 0 0);
   --primary-foreground: oklch(0.985 0 0);
   --secondary: oklch(0.97 0 0);
@@ -67,12 +64,7 @@
   --border: oklch(0.922 0 0);
   --input: oklch(0.922 0 0);
   --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
-  --radius: 0.625rem;
+  --radius: 0rem;               /* site uses square corners */
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.145 0 0);
   --sidebar-primary: oklch(0.205 0 0);
@@ -83,48 +75,98 @@
   --sidebar-ring: oklch(0.708 0 0);
 }
 
-.dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
-}
-
 @layer base {
   * {
     @apply border-border outline-ring/50;
+    box-sizing: border-box;
   }
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-open-sans), "Open Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #353535;
   }
   html {
-    @apply font-sans;
+    font-family: var(--font-open-sans), "Open Sans", sans-serif;
   }
+}
+
+/* ── Site-wide utility classes ── */
+
+/* Dark section background */
+.section-dark {
+  background-color: var(--lr-dark);
+  color: #ffffff;
+}
+
+/* Light section background */
+.section-light {
+  background-color: #ffffff;
+  color: var(--lr-text-dark);
+}
+
+/* Gray section background (contact form) */
+.section-gray {
+  background-color: var(--lr-gray-bg);
+  color: var(--lr-text-dark);
+}
+
+/* Primary CTA button — burnt orange */
+.btn-primary {
+  display: inline-block;
+  background-color: var(--lr-accent);
+  color: #ffffff;
+  border: 3px solid #ffffff;
+  padding: 12px 50px;
+  font-size: 12px;
+  font-family: var(--font-open-sans), "Open Sans", sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  text-decoration: none;
+}
+.btn-primary:hover { opacity: 0.85; }
+
+/* Secondary CTA button — outline only */
+.btn-secondary {
+  display: inline-block;
+  background-color: transparent;
+  color: #ffffff;
+  border: 3px solid #ffffff;
+  padding: 12px 50px;
+  font-size: 12px;
+  font-family: var(--font-open-sans), "Open Sans", sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  text-decoration: none;
+}
+.btn-secondary:hover { opacity: 0.75; }
+
+/* Dark CTA button — charcoal fill */
+.btn-dark {
+  display: inline-block;
+  background-color: var(--lr-dark);
+  color: #ffffff;
+  padding: 15px 40px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+.btn-dark:hover { opacity: 0.85; }
+
+/* Section divider HR */
+.section-divider {
+  width: 60px;
+  border: none;
+  border-top: 1px solid var(--lr-divider);
+  margin: 12px auto;
 }

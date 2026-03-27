@@ -1,41 +1,40 @@
 # Target Website
 
 ## URL
-<!-- Replace with the URL of the website you're reverse-engineering -->
-https://example.com
+https://lukerenner.co
 
 ## Scope
 
 ### Pages to Replicate
-<!-- List every page you want to rebuild. Be specific. -->
-- [ ] Home page
-- [ ] (add more pages here)
+- [x] Home page (all sections: hero, services, copywriting portfolio, case studies, web design showcase, contact CTA)
 
 ### Fidelity Level
-<!-- Choose one -->
-- [ ] **Pixel-perfect** — exact match in colors, spacing, typography, animations
-- [ ] **High fidelity** — visually similar, same layout and feel, minor deviations OK
-- [ ] **Structural** — same layout and components, custom styling acceptable
+- [x] **Pixel-perfect** — exact match in colors, spacing, typography, animations
 
 ### In Scope
-<!-- What you're building -->
 - Visual layout and styling
 - Component structure and interactions
-- Responsive design
-- Mock data for demo purposes
+- Responsive design (mobile/tablet/desktop)
+- Image slider/carousel
+- Navigation with all links
+- All real text content and images
 
 ### Out of Scope
-<!-- What you're NOT building -->
-- Real backend / database
-- Authentication
+- Ucraft-specific form backend (will replace with Formspree)
 - Real-time features
-- SEO optimization
-- Accessibility audit (unless specifically needed)
+- Multi-language routing (appears unused)
 
 ## Why
-<!-- Brief explanation of why you're cloning this site -->
-(Fill in your reason — portfolio piece, learning exercise, demo, template for custom features, etc.)
+Migrating off Ucraft (paid platform) to a self-hosted Next.js site deployed on GitHub Pages. Goal is a pixel-perfect static clone that can be maintained in git and hosted for free.
 
 ## Customization Plans
-<!-- After the base emulation, what changes do you want to make? -->
-- (List planned modifications or say "none — pure emulation")
+- Replace Ucraft contact form + reCAPTCHA with Formspree form
+- Add Google Analytics (GA4: G-DY3CZ00VFL) to layout.tsx
+- Configure next.config.ts for static export (output: 'export') for GitHub Pages hosting
+- "Schedule a Conversation" CTA links to external booking page — keep as-is
+
+## Brand Notes
+- Primary accent color: rgb(196, 85, 67) — burnt orange
+- Site is a professional marketing/consulting portfolio for Luke Renner
+- Services: CMO Strategy, Brand Development, Video Production, Web Design, Analytics, Paid Marketing
+- Case study clients: Cyngn, Manceps, JCC Bowers, Steelhouse
