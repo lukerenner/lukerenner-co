@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { assetPath } from "@/lib/asset-path";
 
 const slides = [
   "/images/391-smartmockupsk9qfry83.png",
@@ -114,7 +115,7 @@ export default function WebDesignSlider() {
 
         {/* Slide image */}
         <Image
-          src={slides[currentIndex]}
+          src={assetPath(slides[currentIndex])}
           alt={`Web design slide ${currentIndex + 1}`}
           width={750}
           height={500}

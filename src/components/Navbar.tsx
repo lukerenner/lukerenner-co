@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
+import { assetPath } from "@/lib/asset-path";
 
 const navLinks = [
   { label: "HOME", href: "/" },
@@ -36,7 +37,7 @@ export function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex-shrink-0">
           <Image
-            src="/images/481-luke-renner-logo-15885549844261.png"
+            src={assetPath("/images/481-luke-renner-logo-15885549844261.png")}
             alt="Luke Renner logo"
             width={60}
             height={60}

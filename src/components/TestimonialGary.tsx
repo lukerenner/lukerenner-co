@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { assetPath } from "@/lib/asset-path";
 
 export default function TestimonialGary() {
   return (
@@ -63,7 +64,7 @@ export default function TestimonialGary() {
         {/* Right column: image */}
         <div className="w-full md:w-1/2 relative overflow-hidden" style={{ minHeight: "400px" }}>
           <Image
-            src="/images/206326401138-startup-marketing-consultant-4.jpg"
+            src={assetPath("/images/206326401138-startup-marketing-consultant-4.jpg")}
             fill
             style={{ objectFit: "cover" }}
             alt="Gary Germer"

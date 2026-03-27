@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { assetPath } from "@/lib/asset-path";
 
 export default function HeroSection() {
   return (
@@ -10,7 +11,7 @@ export default function HeroSection() {
         {/* Left column: hero image */}
         <div className="w-full md:w-1/2 relative overflow-hidden h-64 md:h-auto">
           <Image
-            src="/images/1175-startup-marketing-consultant-17.jpg"
+            src={assetPath("/images/1175-startup-marketing-consultant-17.jpg")}
             fill
             style={{ objectFit: "cover" }}
             alt="Luke Renner"

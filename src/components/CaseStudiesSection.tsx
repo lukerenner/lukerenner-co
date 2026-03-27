@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { TrendingUp, ArrowRight } from "lucide-react";
+import { assetPath } from "@/lib/asset-path";
 
 interface Client {
   name: string;
@@ -116,7 +117,7 @@ export default function CaseStudiesSection() {
               }}
             >
               <Image
-                src={client.logo}
+                src={assetPath(client.logo)}
                 width={120}
                 height={60}
                 alt={client.name}
